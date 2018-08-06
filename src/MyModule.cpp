@@ -69,13 +69,10 @@ struct MyModuleWidget : ModuleWidget {
 		addChild(Widget::create<ScrewSilver>(Vec(RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
 		addChild(Widget::create<ScrewSilver>(Vec(box.size.x - 2 * RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
 
-		addParam(ParamWidget::create<Davies1900hBlackKnob>(Vec(28, 87), module, MyModule::PITCH_PARAM, -3.0, 3.0, 0.0));
 
-		addInput(Port::create<PJ301MPort>(Vec(33, 186), Port::INPUT, module, MyModule::PITCH_INPUT));
 
 		addOutput(Port::create<PJ301MPort>(Vec(33, 275), Port::OUTPUT, module, MyModule::SINE_OUTPUT));
 
-		addChild(ModuleLightWidget::create<MediumLight<RedLight>>(Vec(41, 59), module, MyModule::BLINK_LIGHT));
 	}
 };
 
@@ -84,4 +81,4 @@ struct MyModuleWidget : ModuleWidget {
 // author name for categorization per plugin, module slug (should never
 // change), human-readable module name, and any number of tags
 // (found in `include/tags.hpp`) separated by commas.
-Model *modelMyModule = Model::create<MyModule, MyModuleWidget>("Template", "MyModule", "My Module", OSCILLATOR_TAG);
+Model *modelMyModule = Model::create<MyModule, MyModuleWidget>("Stunning Journey", "Kähler", "Kähler", OSCILLATOR_TAG);
